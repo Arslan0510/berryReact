@@ -17,6 +17,10 @@ class CoverImage extends Component {
     const currentStatus = this.state.sideNavStatus;
     this.setState({ sideNavStatus: !currentStatus });
   }
+  changeSideNav = () => {
+    const currentStatus = this.state.sideNavStatus;
+    this.setState({ sideNavStatus: !currentStatus });
+  };
 
   render() {
     const { handlePageChange } = this.props;
@@ -40,14 +44,17 @@ class CoverImage extends Component {
               </a>
             </div>
           </div>
-          <SideNavigator status={!sideNavStatus ? 'side' : 'side on'} />
+          <SideNavigator
+            status={!sideNavStatus ? 'side' : 'side on'}
+            changer={this.changeSideNav}
+          />
         </nav>
         <Header
           title={'fatty'}
           imgUrl={stamp}
           handlePageChange={handlePageChange}
         >
-          BERRY BURGER
+          Berry BURGER
         </Header>
       </div>
     );

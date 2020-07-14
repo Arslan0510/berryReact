@@ -11,6 +11,7 @@ class SideNavigator extends Component {
 
   closeNav = () => {
     status = 'side';
+    this.props.changer();
   };
 
   render() {
@@ -24,65 +25,21 @@ class SideNavigator extends Component {
           <h6 className='title'>Menu</h6>
           <ul id='menu' className='link'>
             <li>
-              <Link
+              {/* <Link
                 to={{
                   pathname: '/mealdetails',
                   mealDetails: {
                     name: 'Shack Burger',
                   },
                 }}
-              >
-                Shack Burger
-              </Link>
+              > */}
+              Shack Burger
+              {/* </Link> */}
             </li>
-            <li>
-              <Link
-                to={{
-                  pathname: '/mealdetails',
-                  mealDetails: {
-                    name: 'Signature Burger',
-                  },
-                }}
-              >
-                Signature Burger
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={{
-                  pathname: '/mealdetails',
-                  mealDetails: {
-                    name: 'Classic Burger',
-                  },
-                }}
-              >
-                Classic Burger
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={{
-                  pathname: '/mealdetails',
-                  mealDetails: {
-                    name: 'Original Burger',
-                  },
-                }}
-              >
-                Original Burger
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={{
-                  pathname: '/mealdetails',
-                  mealDetails: {
-                    name: 'Cheddar Chunky',
-                  },
-                }}
-              >
-                Cheddar Chunky
-              </Link>
-            </li>
+            <li>Signature Burger</li>
+            <li>Classic Burger</li>
+            <li>Original Burger</li>
+            <li>Cheddar Chunky</li>
             <li id='close-buttom'>
               <Link to='/'>
                 <h5>Return to Home page</h5>
